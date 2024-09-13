@@ -1,9 +1,6 @@
 name: branch
 on:
-  pull_request_target:
-    types:
-      - opened
-      - synchronize
+  push:
 
 permissions:
   actions: read
