@@ -41,7 +41,12 @@ jobs:
       - run: npm ci
       # Generate tag/changelog with semantic release
       # setting parallel higher than one might cause problems with locking git repo
-      - run: npx nx run-many  -t semantic-release --parallel=false
+      - name: Set up JDK for deploy to Sonatype
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'
+          java-version: 21      
+      - run: NX_PERF_LOGGING=true NX_DAEMON=false  npx nx run-many  -t semantic-release --parallel=false
         name: semantic release
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
@@ -114,10 +119,10 @@ jobs:
           npx nx run-many -t build --parallel=false
       - name: package
         run: |
-          npx nx run-many -t package
+          NX_PERF_LOGGING=true NX_DAEMON=false npx nx run-many -t package
       # Publish to npm,pypi  with new nx release publish functionality
       - run: |
-          npx nx release publish --verbose
+          NX_PERF_LOGGING=true NX_DAEMON=false  npx nx release publish --verbose 
         name: publish
         env:
           TWINE_USERNAME: '__token__'
