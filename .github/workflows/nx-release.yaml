@@ -46,7 +46,7 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: 21      
-      - run: NX_PERF_LOGGING=true NX_DAEMON=false  npx nx run-many @affinidi-tdk/credential-issuance-client-java -t semantic-release --parallel=false --verbose
+      - run: NX_PERF_LOGGING=true NX_DAEMON=false  npx nx run-many -p @affinidi-tdk/credential-issuance-client-java -t semantic-release --parallel=false --verbose
         name: semantic release
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
