@@ -48,8 +48,8 @@ jobs:
           java-version: 21
       - run: |
           cd clients/java/credential.issuance.client 
-          mvn --version
-          mvn versions:set -DnewVersion=1.0.3
+          mvn --no-transfer-progress --batch-mode --version
+          mvn --no-transfer-progress --batch-mode versions:set -DnewVersion=1.0.3
       - run: NX_PERF_LOGGING=true NX_DAEMON=false  npx nx run-many -p @affinidi-tdk/credential-issuance-client-java -t semantic-release --parallel=false --verbose
         name: semantic release
         env:

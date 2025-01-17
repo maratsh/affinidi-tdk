@@ -39,8 +39,8 @@
             "@semantic-release/exec",
             {
               "execCwd": "clients/java/credential.issuance.client",
-              "prepareCmd": "mvn versions:set -DnewVersion=${nextRelease.version}",
-              "publishCmd": "mvn versions:set -DnewVersion=${nextRelease.version}",
+              "prepareCmd": "mvn mvn --no-transfer-progress --batch-mode versions:set -DnewVersion=${nextRelease.version}",
+              "publishCmd": "mvn mvn --no-transfer-progress --batch-mode versions:set -DnewVersion=${nextRelease.version}",
               "verifyConditionsCmd": "mvn --version"
             }
           ]
