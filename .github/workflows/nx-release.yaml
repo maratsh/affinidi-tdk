@@ -50,7 +50,7 @@ jobs:
           cd clients/java/credential.issuance.client 
           mvn --no-transfer-progress --batch-mode --version
           mvn --no-transfer-progress --batch-mode versions:set -DnewVersion=1.0.3
-      - run: NX_PERF_LOGGING=true NX_DAEMON=false  npx nx run-many -p @affinidi-tdk/credential-issuance-client-java -t semantic-release --parallel=false --verbose
+      - run: NODE_OPTIONS="--max-old-space-size=8192" NX_PERF_LOGGING=true NX_DAEMON=false  npx nx run-many -p @affinidi-tdk/credential-issuance-client-java -t semantic-release --parallel=false --verbose
         name: semantic release
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
