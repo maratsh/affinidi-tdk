@@ -2,7 +2,7 @@
   "changelog": true,
   "npm": true,
   "github": false,
-  "repositoryUrl": "git@github.com:affinidi/affinidi-tdk.git",
+  "repositoryUrl": "git@github.com:maratsh/affinidi-tdk.git",
   "branches": [
     "master"
   ]
