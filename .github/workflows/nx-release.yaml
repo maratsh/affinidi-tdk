@@ -95,9 +95,6 @@ jobs:
         id: mint
         uses: tschm/token-mint-action@v1.0.3
 
-      - name: Set version for non-js client packages
-        run: npx nx run-many -t set-version
-
       - name: Install gpg secret key for java Maven
         run: |
           echo "${{ secrets.MAVEN_GPG_SECRET_KEY }}" | gpg --batch --import
