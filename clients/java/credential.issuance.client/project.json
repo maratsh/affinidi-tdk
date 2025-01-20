@@ -9,20 +9,14 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",
-        "command": "exit 0"
-      }
-    },
-    "set-version": {
-      "executor": "@affinidi-tdk/nx-tdk-tools:set-version",
-      "options": {
-        "packageName": "credential.issuance.client"
+        "command": "mvn --no-transfer-progress --batch-mode clean package"
       }
     },
     "nx-release-publish": {
       "executor": "nx:run-commands",
       "options": {
         "cwd": "{projectRoot}",
-        "command": "exit 0"
+        "command": "mvn --no-transfer-progress --batch-mode clean deploy -P sign-artifacts"
       }
     },
     "semantic-release": {
@@ -32,15 +26,15 @@
         "git": false,
         "github": true,
         "npm": false,
-        "repositoryUrl": "git@github.com:maratsh/affinidi-tdk.git",
+        "repositoryUrl": "git@github.com:affinidi/affinidi-tdk.git",
         "branches": ["main"],
         "plugins": [
           [
             "@semantic-release/exec",
             {
               "execCwd": "clients/java/credential.issuance.client",
-              "prepareCmd": "exit 0",
-              "publishCmd": "exit 0",
+              "prepareCmd": "mvn versions:set -DnewVersion=${nextRelease.version}",
+              "publishCmd": "mvn --no-transfer-progress --batch-mode clean deploy -P sign-artifacts",
               "verifyConditionsCmd": "mvn --version"
             }
           ]
