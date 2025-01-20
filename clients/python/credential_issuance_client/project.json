@@ -27,7 +27,7 @@
             {
               "execCwd": "{projectRoot}",
               "prepareCmd": "poetry version ${nextRelease.version}",
-              "publishCmd": "poetry publish --skip-existing",
+              "publishCmd": "poetry publish --skip-existing --build",
               "verifyConditionsCmd": "poetry --version"
             }
           ]
