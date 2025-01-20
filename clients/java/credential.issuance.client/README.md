@@ -1,4 +1,5 @@
 # credential.issuance.client
+TEST
 
 CredentialIssuanceService
 
