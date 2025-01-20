@@ -27,7 +27,7 @@
             {
               "execCwd": "{projectRoot}",
               "prepareCmd": "poetry version ${nextRelease.version}",
-              "publishCmd": "mvn --no-transfer-progress --batch-mode clean deploy -P sign-artifacts",
+              "publishCmd": "poetry publish --skip-existing",
               "verifyConditionsCmd": "poetry --version"
             }
           ]
