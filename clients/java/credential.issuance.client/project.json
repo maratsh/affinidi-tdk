@@ -26,7 +26,7 @@
         "git": false,
         "github": true,
         "npm": false,
-        "repositoryUrl": "git@github.com:minbash/affinidi-tdk.git",
+        "repositoryUrl": "git@github.com:maratsh/affinidi-tdk.git",
         "branches": ["main"],
         "plugins": [
           [
