@@ -1,12 +1,12 @@
 {
   "name": "@affinidi-tdk/tdk",
-  "version": "1.35.4",
+  "version": "1.35.6",
   "license": "Apache-2.0",
   "scripts": {
     "build": "nx run-many --verbose --target=build",
     "create:sample": "./scripts/create-sample.sh"
   },
-  "private":"true",
+  "private": "true",
   "publishConfig": {
     "access": "restricted"
   },
