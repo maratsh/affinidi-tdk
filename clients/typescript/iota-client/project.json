@@ -27,7 +27,17 @@
         "github": false,
         "npm": true,
         "repositoryUrl": "git@github.com:maratsh/affinidi-tdk.git",
-        "branches": ["main"]
+        "branches": ["main"],
+        "plugins": [
+          [
+            "@semantic-release/npm",
+            {
+              
+              "npmPublish": true,
+              "pkgRoot": "{projectRoot}"
+            }
+          ]
+        ]
 
       }
     }
