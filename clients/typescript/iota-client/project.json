@@ -25,6 +25,7 @@
     },
     "semantic-release": {
       "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+      "dependsOn": ["build"],
       "options": {
         "changelog": false,
         "git": false,

@@ -1,7 +1,7 @@
 {
   "name": "@affinidi-tdk/auth-provider",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/auth-provider",
+  "sourceRoot": "packages/jsii/auth-provider",
   "projectType": "library",
   "private": false,
   "targets": {
