@@ -82,7 +82,7 @@ jobs:
       - run: |
           BASE_SHA=${{ github.event.before }}
           HEAD_SHA=${{ github.event.after }}
-          npx nx affected:semantic-release --base="$BASE_SHA" --head="$HEAD_SHA"  --parallel=false 
+          npx nx affected -t semantic-release --base="$BASE_SHA" --head="$HEAD_SHA"  --parallel=false 
         name: semantic release
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
