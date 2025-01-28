@@ -79,7 +79,10 @@ jobs:
       - run: npm ci
       # Generate tag/changelog with semantic release
       # setting parallel higher than one might cause problems with locking git repo
-      - run: npx nx affected  -t semantic-release --parallel=false
+      - run: |
+          BASE_SHA=${{ github.event.before }}
+          HEAD_SHA=${{ github.event.after }}
+          npx nx affected:semantic-release --base="$BASE_SHA" --head="$HEAD_SHA"  --parallel=false 
         name: semantic release
         env:
           GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
