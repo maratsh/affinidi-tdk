@@ -24,7 +24,7 @@
       "options": {
         "changelog": false,
         "git": false,
-        "github": true,
+        "github": false,
         "npm": true,
         "repositoryUrl": "git@github.com:maratsh/affinidi-tdk.git",
         "branches": ["main"],
