@@ -1,3 +1,12 @@
+## [1.31.1](https://github.com/maratsh/affinidi-tdk/compare/@affinidi-tdk/auth-provider-v1.31.0...@affinidi-tdk/auth-provider-v1.31.1) (2025-01-28)
+
+
+### Bug Fixes
+
+* cleanup tools ([#509](https://github.com/maratsh/affinidi-tdk/issues/509)) ([4c70188](https://github.com/maratsh/affinidi-tdk/commit/4c7018842e06c66cd52e0c14a2fb1b26b30dfc25))
+* reset version ([eac6e8c](https://github.com/maratsh/affinidi-tdk/commit/eac6e8c32e5738deea84f6ff5b2e48dbc31e151f))
+* rework pipeline ([#4](https://github.com/maratsh/affinidi-tdk/issues/4)) ([c2445fb](https://github.com/maratsh/affinidi-tdk/commit/c2445fbaeb71849d96e3508fecb2c8b9174b1720))
+
 ## [1.31.1](https://github.com/affinidi/affinidi-tdk/compare/@affinidi-tdk/auth-provider-v1.31.0...@affinidi-tdk/auth-provider-v1.31.1) (2025-01-28)
 
 
