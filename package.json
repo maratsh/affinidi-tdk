@@ -1,6 +1,6 @@
 {
   "name": "@affinidi-tdk/tdk",
-  "version": "1.35.3",
+  "version": "1.35.4",
   "license": "Apache-2.0",
   "scripts": {
     "build": "nx run-many --verbose --target=build",
