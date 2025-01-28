@@ -1,3 +1,10 @@
+## [1.31.2](https://github.com/maratsh/affinidi-tdk/compare/@affinidi-tdk/auth-provider-v1.31.1...@affinidi-tdk/auth-provider-v1.31.2) (2025-01-28)
+
+
+### Bug Fixes
+
+* add build before ([1658745](https://github.com/maratsh/affinidi-tdk/commit/1658745ba62e07bc81993aa7593e13eaef8a64e6))
+
 ## [1.31.1](https://github.com/maratsh/affinidi-tdk/compare/@affinidi-tdk/auth-provider-v1.31.0...@affinidi-tdk/auth-provider-v1.31.1) (2025-01-28)
 
 
